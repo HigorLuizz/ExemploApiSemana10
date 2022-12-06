@@ -10,10 +10,10 @@ public class NotaController {
 
     @GetMapping
     public NotaResponse entraNotas(){
-        return new NotaResponse("Nota criada");
+        return new NotaResponse("Nota titulo","Nota criada");
     }
     @PostMapping
     public NotaResponse salvaNota(@RequestBody NotaRequest notaRequest){
-        return new NotaResponse(notaRequest.getNota());
+        return new NotaResponse(notaRequest.getTitulo(),notaRequest.getNota());
     }
 }
